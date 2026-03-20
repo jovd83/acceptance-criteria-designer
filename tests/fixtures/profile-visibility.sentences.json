@@ -1,0 +1,45 @@
+{
+  "schema_version": "2.0.0",
+  "format": "sentences",
+  "source_summary": "Users can manage email visibility with private and contacts-only modes, while support administrators retain investigation access.",
+  "assumptions": [
+    "Visibility changes take effect immediately after the user saves the setting."
+  ],
+  "out_of_scope": [
+    "Public profile visibility for email addresses"
+  ],
+  "coverage_assessment": {
+    "score": 92,
+    "covered_behaviors": [
+      "Default private visibility for new accounts",
+      "User control over supported visibility modes",
+      "Administrator support access",
+      "UI explanation of the active mode"
+    ],
+    "gaps": [
+      "Audit logging requirements for administrator access are not specified."
+    ]
+  },
+  "acceptance_criteria": [
+    {
+      "id": "AC-SNT-001",
+      "category": "state",
+      "sentence": "New accounts shall default email visibility to private."
+    },
+    {
+      "id": "AC-SNT-002",
+      "category": "functional",
+      "sentence": "A user shall be able to change email visibility between private and contacts-only."
+    },
+    {
+      "id": "AC-SNT-003",
+      "category": "permission",
+      "sentence": "Support administrators shall be able to view a user's email address during an investigation even when the user visibility setting is private."
+    },
+    {
+      "id": "AC-SNT-004",
+      "category": "functional",
+      "sentence": "The settings UI shall explain the currently selected email visibility mode."
+    }
+  ]
+}

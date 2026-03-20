@@ -1,0 +1,7 @@
+interface:
+  display_name: "Acceptance Criteria Designer"
+  short_description: "Design testable acceptance criteria from requirements"
+  icon_small: "./assets/acceptance-criteria-designer-small.svg"
+  icon_large: "./assets/acceptance-criteria-designer.svg"
+  brand_color: "#0F766E"
+  default_prompt: "Use $acceptance-criteria-designer to draft or review acceptance criteria and return a schema-compliant JSON contract."

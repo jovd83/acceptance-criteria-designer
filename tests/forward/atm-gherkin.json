@@ -1,0 +1,11 @@
+{
+  "id": "atm-gherkin",
+  "format": "gherkin",
+  "input_file": "tests/fixtures/atm-withdrawal.input.md",
+  "instruction": "Use ${skill_name} from {skill_root} to generate Gherkin acceptance criteria and a schema-compliant JSON contract for the following source document.",
+  "required_substrings": [
+    "| ID | Title | Given | When | Then |",
+    "```json",
+    "\"format\": \"gherkin\""
+  ]
+}

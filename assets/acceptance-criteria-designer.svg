@@ -1,0 +1,32 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="panelBg" x1="80" y1="60" x2="520" y2="540" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#14B8A6"/>
+      <stop offset="1" stop-color="#0F766E"/>
+    </linearGradient>
+    <linearGradient id="sheetLarge" x1="174" y1="166" x2="446" y2="488" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#CCFBF1"/>
+    </linearGradient>
+    <linearGradient id="frameBg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F0FDFA"/>
+      <stop offset="1" stop-color="#ECFEFF"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" rx="48" fill="url(#frameBg)"/>
+  <rect x="76" y="76" width="440" height="478" rx="72" fill="url(#panelBg)"/>
+  <rect x="160" y="146" width="286" height="344" rx="38" fill="url(#sheetLarge)"/>
+  <rect x="214" y="216" width="172" height="18" rx="9" fill="#0F766E" fill-opacity="0.18"/>
+  <rect x="214" y="256" width="188" height="18" rx="9" fill="#0F766E" fill-opacity="0.18"/>
+  <rect x="214" y="296" width="148" height="18" rx="9" fill="#0F766E" fill-opacity="0.18"/>
+  <path d="M246 396L292 442L380 346" stroke="#0F766E" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="582" y="256" fill="#134E4A" font-family="Segoe UI, Arial, sans-serif" font-size="60" font-weight="700">
+    Acceptance Criteria
+  </text>
+  <text x="582" y="328" fill="#115E59" font-family="Segoe UI, Arial, sans-serif" font-size="60" font-weight="700">
+    Designer
+  </text>
+  <text x="582" y="404" fill="#0F766E" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="400">
+    Structured, testable product behavior contracts
+  </text>
+</svg>

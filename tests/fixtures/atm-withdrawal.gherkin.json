@@ -1,0 +1,45 @@
+{
+  "schema_version": "2.0.0",
+  "format": "gherkin",
+  "source_summary": "ATM cash withdrawal is available after authentication, capped at $500 per day, and must reject insufficient-funds requests.",
+  "assumptions": [
+    "The ATM can determine the customer's remaining daily withdrawal allowance before dispensing cash."
+  ],
+  "out_of_scope": [
+    "Cash deposits and balance inquiry scenarios"
+  ],
+  "coverage_assessment": {
+    "score": 95,
+    "covered_behaviors": [
+      "Successful withdrawal within remaining daily limit",
+      "Daily limit rejection",
+      "Insufficient funds rejection"
+    ],
+    "gaps": [
+      "Card retention behavior after repeated invalid PIN attempts is not specified."
+    ]
+  },
+  "acceptance_criteria": [
+    {
+      "id": "AC-GHK-001",
+      "title": "Dispense cash within the remaining daily limit",
+      "given": "A customer is authenticated and has at least $100 available balance and daily withdrawal allowance remaining",
+      "when": "The customer requests $100 cash",
+      "then": "The ATM dispenses $100, records the withdrawal, and decreases the remaining daily allowance by $100"
+    },
+    {
+      "id": "AC-GHK-002",
+      "title": "Reject requests that would exceed the daily limit",
+      "given": "A customer is authenticated and has already withdrawn $450 today",
+      "when": "The customer requests $100 cash",
+      "then": "The ATM declines the request and explains that the $500 daily limit would be exceeded"
+    },
+    {
+      "id": "AC-GHK-003",
+      "title": "Reject withdrawals when the account balance is insufficient",
+      "given": "A customer is authenticated and the requested amount is greater than the available account balance",
+      "when": "The customer confirms the withdrawal",
+      "then": "The ATM declines the withdrawal and leaves the account balance unchanged"
+    }
+  ]
+}

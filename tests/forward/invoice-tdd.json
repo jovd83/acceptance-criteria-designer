@@ -1,0 +1,11 @@
+{
+  "id": "invoice-tdd",
+  "format": "tdd",
+  "input_file": "tests/fixtures/invoice-export.input.md",
+  "instruction": "Use ${skill_name} from {skill_root} to generate TDD-style acceptance criteria and a schema-compliant JSON contract for the following source document.",
+  "required_substrings": [
+    "| ID | Title | Setup | Action | Expected Outcome |",
+    "```json",
+    "\"format\": \"tdd\""
+  ]
+}

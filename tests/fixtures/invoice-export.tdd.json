@@ -1,0 +1,53 @@
+{
+  "schema_version": "2.0.0",
+  "format": "tdd",
+  "source_summary": "Finance users can export finalized invoices to CSV for a required date range of up to 31 days, including empty-result exports with headers.",
+  "assumptions": [
+    "The export action is initiated by an authenticated finance manager."
+  ],
+  "out_of_scope": [
+    "PDF exports and invoice approval workflows"
+  ],
+  "coverage_assessment": {
+    "score": 94,
+    "covered_behaviors": [
+      "Successful CSV export for finalized invoices",
+      "Validation of required date range",
+      "Validation of 31-day maximum range",
+      "Header-only export when no rows match"
+    ],
+    "gaps": [
+      "The required CSV column order is not specified."
+    ]
+  },
+  "acceptance_criteria": [
+    {
+      "id": "AC-TDD-001",
+      "title": "Export finalized invoices within an allowed date range",
+      "setup": "Finalized invoices exist between the selected start date and end date, and the range spans 31 days or fewer",
+      "action": "The finance manager exports invoices as CSV",
+      "expected_outcome": "The system returns a CSV containing only finalized invoices that fall within the selected range"
+    },
+    {
+      "id": "AC-TDD-002",
+      "title": "Require both start and end dates",
+      "setup": "The finance manager opens the invoice export flow without a complete date range",
+      "action": "The finance manager submits the export request",
+      "expected_outcome": "The system rejects the request and explains that both start and end dates are required"
+    },
+    {
+      "id": "AC-TDD-003",
+      "title": "Reject date ranges longer than 31 days",
+      "setup": "The finance manager selects a start date and end date that are more than 31 days apart",
+      "action": "The finance manager submits the export request",
+      "expected_outcome": "The system rejects the request and explains that the maximum export range is 31 days"
+    },
+    {
+      "id": "AC-TDD-004",
+      "title": "Return a header-only file when no finalized invoices match",
+      "setup": "No finalized invoices exist in the selected date range",
+      "action": "The finance manager exports invoices as CSV",
+      "expected_outcome": "The system returns a CSV file containing headers only and no invoice rows"
+    }
+  ]
+}

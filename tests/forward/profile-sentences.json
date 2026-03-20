@@ -1,0 +1,11 @@
+{
+  "id": "profile-sentences",
+  "format": "sentences",
+  "input_file": "tests/fixtures/profile-visibility.input.md",
+  "instruction": "Use ${skill_name} from {skill_root} to generate sentence-style acceptance criteria and a schema-compliant JSON contract for the following source document.",
+  "required_substrings": [
+    "[AC-SNT-001]",
+    "```json",
+    "\"format\": \"sentences\""
+  ]
+}
