@@ -1,5 +1,10 @@
 # Acceptance Criteria Designer
 
+[![Validate Skills](https://github.com/jovd83/acceptance-criteria-designer/actions/workflows/validate.yml/badge.svg)](https://github.com/jovd83/acceptance-criteria-designer/actions/workflows/validate.yml)
+[![version](https://img.shields.io/badge/version-3.0.0-blue)](CHANGELOG.md)
+[![license](https://img.shields.io/badge/license-MIT-green)](LICENSE)
+[![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=flat&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/jovd83)
+
 Turn raw product intent into testable acceptance criteria and a machine-readable contract.
 
 This repository packages an Agent Skill for drafting, refining, reviewing, and converting acceptance criteria from user stories, PRD excerpts, tickets, use cases, business rules, and existing requirement artifacts. The skill supports Gherkin, TDD-style, and sentence-based outputs and always pairs the human-readable result with a JSON contract that matches the bundled schemas.
