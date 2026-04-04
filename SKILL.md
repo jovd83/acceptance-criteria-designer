@@ -110,6 +110,13 @@ Every contract must include:
 
 Report a concise `Coverage Quality Score (CQS)` from 0-100 using the rubric in `references/criteria-authoring-guide.md`. Keep the score honest and explain major remaining gaps if the source was incomplete.
 
+## Gotchas
+
+- **Format Confusion**: Ensure the output format (Gherkin vs TDD vs Sentence) remains consistent throughout the entire response. Mixing them up causes downstream confusion.
+- **JSON Schema Strictness**: The JSON contract must strictly adhere to the schemas in `assets/`. Missing mandatory fields like `coverage_assessment` or `schema_version` will cause contract validation failures.
+- **Inference vs. Fact**: Avoid silently blurring the line between explicit source facts and inferred behavior, which happens often with vague source texts. Any inferred behavior must be explicitly logged in the `assumptions` array.
+- **Over-Specification**: Avoid embedding UI-specific details (e.g., "click the blue submit button") in behavioral criteria unless explicitly present in the source text. Keep criteria focused on observable system behavior.
+
 ## Guardrails
 
 - Do not invent business rules that conflict with or go beyond the source without labeling them as assumptions or follow-up gaps.
