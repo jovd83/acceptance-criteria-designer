@@ -5,8 +5,15 @@ license: MIT
 metadata:
   author: jovd83
   version: "3.0.0"
+  dispatcher-output-artifacts: acceptance_criteria, criteria_review, normalized_criteria_json
+  dispatcher-risk: low
+  dispatcher-writes-files: true
+  dispatcher-input-artifacts: requirements, user_story, acceptance_criteria, product_constraints
+  dispatcher-capabilities: acceptance-criteria-design, requirements-clarification, criteria-format-conversion
+  dispatcher-stack-tags: analysis, testing, product
+  dispatcher-accepted-intents: design_acceptance_criteria, review_acceptance_criteria, convert_acceptance_criteria
+  dispatcher-category: analysis
 ---
-
 # Acceptance Criteria Designer
 
 Use this skill to turn feature intent into clear, testable, reviewable acceptance criteria without inventing unsupported behavior.
