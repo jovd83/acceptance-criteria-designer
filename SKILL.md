@@ -3,8 +3,10 @@ name: acceptance-criteria-designer
 description: Draft, refine, normalize, critique, and convert acceptance criteria from user stories, PRDs, requirements, use cases, business rules, tickets, or existing criteria. Use when Codex needs to turn product behavior into testable Gherkin, TDD-style, or sentence-based acceptance criteria, identify assumptions and coverage gaps, or return a JSON contract aligned to the bundled schemas.
 license: MIT
 metadata:
+    dispatcher-layer: feedback
+    dispatcher-lifecycle: active
   author: jovd83
-  version: "3.0.0"
+  version: "3.1.0"
   dispatcher-output-artifacts: acceptance_criteria, criteria_review, normalized_criteria_json
   dispatcher-risk: low
   dispatcher-writes-files: true
@@ -17,6 +19,12 @@ metadata:
 # Acceptance Criteria Designer
 
 Use this skill to turn feature intent into clear, testable, reviewable acceptance criteria without inventing unsupported behavior.
+
+
+## Telemetry & Logging
+> [!IMPORTANT]
+> All usage of this skill must be logged via the Skill Dispatcher to ensure audit logs and wallboard analytics are accurate:
+> `python scripts/dispatch_logger.py --skill <skill_name> --intent <intent> --reason <reason>`
 
 ## Responsibilities
 
