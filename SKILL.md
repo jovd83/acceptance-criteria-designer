@@ -3,7 +3,7 @@ name: acceptance-criteria-designer
 description: Draft, refine, normalize, critique, and convert acceptance criteria from user stories, PRDs, requirements, use cases, business rules, tickets, or existing criteria. Use when Codex needs to turn product behavior into testable Gherkin, TDD-style, or sentence-based acceptance criteria, identify assumptions and coverage gaps, or return a JSON contract aligned to the bundled schemas.
 license: MIT
 metadata:
-  dispatcher-layer: feedback
+  dispatcher-layer: information
   dispatcher-lifecycle: active
   author: jovd83
   version: "3.1.0"
