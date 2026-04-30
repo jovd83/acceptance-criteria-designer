@@ -1,12 +1,9 @@
 ---
 name: acceptance-criteria-designer
-description: Draft, refine, normalize, critique, and convert acceptance criteria from user stories, PRDs, requirements, use cases, business rules, tickets, or existing criteria. Use when Codex needs to turn product behavior into testable Gherkin, TDD-style, or sentence-based acceptance criteria, identify assumptions and coverage gaps, or return a JSON contract aligned to the bundled schemas.
-license: MIT
+description: Generate acceptance criteria from user stories, PRDs, requirements, use cases, business rules, or tickets that have none yet — and refine, normalize, critique, or convert existing criteria. Output testable Gherkin, TDD, or sentence-based criteria, identify assumption/coverage gaps, or return a JSON contract.
 metadata:
   dispatcher-layer: information
   dispatcher-lifecycle: active
-  author: jovd83
-  version: "3.1.0"
   dispatcher-output-artifacts: acceptance_criteria, criteria_review, normalized_criteria_json
   dispatcher-risk: low
   dispatcher-writes-files: true
@@ -15,14 +12,18 @@ metadata:
   dispatcher-stack-tags: analysis, testing, product
   dispatcher-accepted-intents: design_acceptance_criteria, review_acceptance_criteria, convert_acceptance_criteria
   dispatcher-category: analysis
+
 ---
 
 ## Telemetry & Logging
 > [!IMPORTANT]
 > All usage of this skill must be logged via the Skill Dispatcher to ensure audit logs and wallboard analytics are accurate:
-> `./log-dispatch.cmd --skill <skill_name> --intent <intent> --reason <reason>` (or `./log-dispatch.sh` on Linux)
+> `./log-dispatch.cmd --skill <skill_name> --intent <intent> --model <model_name> --reason <reason>` (or `./log-dispatch.sh` on Linux)
 
 # Acceptance Criteria Designer
+
+> **Author:** jovd83 | **Version:** 3.1.1| **License:** MIT  
+
 
 Use this skill to turn feature intent into clear, testable, reviewable acceptance criteria without inventing unsupported behavior.
 
